@@ -2,8 +2,7 @@ FROM debian:jessie
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update
-RUN apt-get -y install nginx supervisor
+RUN apt-get update && apt-get -y install nginx supervisor
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* \
            /tmp/* \
